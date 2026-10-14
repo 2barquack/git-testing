@@ -75,6 +75,7 @@ main
  ●  Add animated SVG guides            ← all skill/* branches start here
  ●  test-03: mark release as APPROVED  ← main moves on (skills 03 + 04)
  ●  test-04: add Release 2.0 banner
+ ●  …later README updates (they never touch the test-XX.txt files)
 
 skill/01-branching     1 commit    a line that only exists on this branch
 skill/02-merge         2 commits   ticks the release checklist
@@ -305,7 +306,7 @@ git merge skill/04-rebase      # Fast-forward: no merge commit needed
 
 - `test-04.txt` contains `>>> Release 2.0 is live on main <<<` **and** steps 1 to 5.
 - Before the final merge, `git rev-list --count main..skill/04-rebase` printed `2`.
-- `git status` on the rebased branch said it and `origin/skill/04-rebase` *have diverged* (4 and 2 different commits). That's the rewrite: same changes, new commits.
+- `git status` on the rebased branch said it and `origin/skill/04-rebase` *have diverged*: your copy now holds main's newer commits plus your 2 rewritten ones, while the remote still has the 2 originals. That's the rewrite: same changes, new commits.
 - The final `git merge` printed `Fast-forward`.
 
 </details>
