@@ -10,3 +10,4 @@ Server config
 port      = 8080
 debug     = false
 log_level = info
+timeout   = 30
