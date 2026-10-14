@@ -767,12 +767,12 @@ Everything above works locally after a simple clone. To practise the GitHub side
 3. Make small, focused commits to any `test-XX.txt`.
 4. Stay up to date: `git fetch origin`, then `git rebase origin/main`.
 5. Push: `git push -u origin practice/<your-name>`. After a rebase: `git push --force-with-lease`.
-6. Open a **pull request**, ask a teammate to review, answer comments with new commits (or `--fixup` + autosquash).
+6. Open a **pull request in your fork** (from `practice/<your-name>` into your fork's `main`), ask a teammate to review, answer comments with new commits (or `--fixup` + autosquash).
 7. Merge with **Squash and merge** for a tidy history, then delete the branch.
 8. Broke something after merging? Use the **Revert** button on the merged pull request.
 
 > [!IMPORTANT]
-> Team members with write access to this repository: please **don't push to `main` or `skill/*`**. They are everyone's starting point. Use `practice/<your-name>/...` branches.
+> `main` and `skill/*` are **protected**: pushes, force-pushes and deletions there are blocked for everyone except the maintainer, because they are everyone's starting point. Team members with write access: use `practice/<your-name>/...` branches.
 
 ## Test yourself
 
@@ -844,7 +844,13 @@ About 10 (log₂ 1000 ≈ 10). And always finish with `git bisect reset`.
 
 ## Contributing
 
-Spotted a mistake, or have an idea for skill #12? Open an issue or a pull request. Please keep practice files as plain `.txt`, and keep `main` and `skill/*` exactly as described in [How the lab works](#how-the-lab-works).
+To keep the lab clean and safe:
+
+- Issues and pull requests on this repository are limited to **collaborators**.
+- `main` and `skill/*` are **protected** branches (no pushes, force-pushes or deletions except by the maintainer).
+- **Secret scanning push protection** blocks pushes that contain tokens or keys.
+
+You don't need any access to learn: clone it, or **fork it and make it your own**. Spotted a mistake or have an idea for skill #12? Get in touch with [@aimagician](https://github.com/aimagician).
 
 ---
 
