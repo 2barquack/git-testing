@@ -1,0 +1,12 @@
+# ==========================================================
+#  test-06.txt  |  Skill 06  |  Stash (apply vs. pop)
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 06
+# ==========================================================
+
+Shopping list
+- coffee
+- bread
+- milk

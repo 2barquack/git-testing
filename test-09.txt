@@ -1,0 +1,13 @@
+# ==========================================================
+#  test-09.txt  |  Skill 09  |  Cherry-pick
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 09
+# ==========================================================
+
+Contact
+email = support@exmaple.com
+phone = +1 555 0100
+
+Experiments:

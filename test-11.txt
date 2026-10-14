@@ -1,0 +1,12 @@
+# ==========================================================
+#  test-11.txt  |  Skill 11  |  Bisect (find the commit that broke it)
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 11
+# ==========================================================
+
+Shop settings
+currency = EUR
+tax_rate = 0.20
+shipping = 4.90

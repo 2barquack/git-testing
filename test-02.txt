@@ -1,0 +1,14 @@
+# ==========================================================
+#  test-02.txt  |  Skill 02  |  Merge (fast-forward vs. merge commit)
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 02
+# ==========================================================
+
+Release checklist
+[x] write code
+[ ] write tests
+[ ] update docs
+
+Notes (add your own lines below):

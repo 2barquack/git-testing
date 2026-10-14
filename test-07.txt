@@ -1,0 +1,9 @@
+# ==========================================================
+#  test-07.txt  |  Skill 07  |  Reset (soft / mixed / hard)
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 07
+# ==========================================================
+
+Diary

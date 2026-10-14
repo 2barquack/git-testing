@@ -1,0 +1,12 @@
+# ==========================================================
+#  test-01.txt  |  Skill 01  |  Branch & switch
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 01
+# ==========================================================
+
+This version lives on:  main
+Mission:                create a branch, commit, switch back
+
+Notes (add your own lines below):

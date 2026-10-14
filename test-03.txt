@@ -1,0 +1,12 @@
+# ==========================================================
+#  test-03.txt  |  Skill 03  |  Merge conflicts
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 03
+# ==========================================================
+
+Project:   Apollo
+Owner:     Ana
+Status:    IN REVIEW
+Deadline:  Friday

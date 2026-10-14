@@ -1,0 +1,10 @@
+# ==========================================================
+#  test-05.txt  |  Skill 05  |  Interactive rebase (squash & clean up)
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 05
+# ==========================================================
+
+Login screen copy
+-----------------

@@ -1,0 +1,9 @@
+# ==========================================================
+#  test-10.txt  |  Skill 10  |  Reflog (your safety net)
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 10
+# ==========================================================
+
+Story

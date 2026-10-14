@@ -1,0 +1,12 @@
+# ==========================================================
+#  test-08.txt  |  Skill 08  |  Revert
+# ==========================================================
+#  Practice file for the git-testing lab.
+#  Edit it, commit it, break it - nothing here is precious.
+#  Guide: README.md -> Skill 08
+# ==========================================================
+
+Server config
+port      = 8080
+debug     = false
+log_level = info
