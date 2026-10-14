@@ -72,8 +72,8 @@ Every skill has **one branch and one file**, so exercises never interfere with e
 ```text
 main
  ●  Initial commit: README and practice files
- ●  Add animated SVG guides            ← every skill/* branch starts from here
- ●  test-03: mark release as APPROVED  ← main moves on (sets up skills 03 and 04)
+ ●  Add animated SVG guides            ← all skill/* branches start here
+ ●  test-03: mark release as APPROVED  ← main moves on (skills 03 + 04)
  ●  test-04: add Release 2.0 banner
 
 skill/01-branching     1 commit    a line that only exists on this branch
@@ -96,8 +96,11 @@ skill/11-bisect        8 commits   one of them silently breaks a setting
 Made a mess? That's the point. Put things back like this:
 
 ```bash
-# 1. Leave anything half-finished (use the one that matches what you were doing)
-git merge --abort          # or: git rebase --abort / git cherry-pick --abort / git bisect reset
+# 1. Leave anything half-finished (run only the one that applies)
+git merge --abort
+git rebase --abort
+git cherry-pick --abort
+git bisect reset
 
 # 2. Put main back exactly as it is on GitHub
 git switch main
@@ -113,19 +116,21 @@ git reset --hard origin/skill/04-rebase
 
 ## Skill map
 
-| # | Skill | You'll learn | Practice branch | File | Level | Risk |
-|:-:|---|---|---|---|---|:-:|
-| 01 | [Branch & switch](#01--branch--switch) | Create, switch and delete branches | `skill/01-branching` | `test-01.txt` | Beginner | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
-| 02 | [Merge](#02--merge) | Fast-forward vs. merge commit | `skill/02-merge` | `test-02.txt` | Beginner | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
-| 03 | [Merge conflicts](#03--merge-conflicts) | Read and resolve conflict markers | `skill/03-conflict` | `test-03.txt` | Intermediate | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
-| 04 | [Rebase](#04--rebase) | Replay your work on the latest main | `skill/04-rebase` | `test-04.txt` | Intermediate | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
-| 05 | [Interactive rebase](#05--interactive-rebase) | Squash, fixup, reword, drop | `skill/05-squash` | `test-05.txt` | Advanced | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
-| 06 | [Stash](#06--stash-apply-vs-pop) | `apply` vs. `pop` | `skill/06-stash` | `test-06.txt` | Beginner | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
-| 07 | [Reset](#07--reset-soft-mixed-hard) | `--soft`, `--mixed`, `--hard` | `skill/07-reset` | `test-07.txt` | Intermediate | ![DANGER](https://img.shields.io/badge/DANGER-f85149?style=flat-square) |
-| 08 | [Revert](#08--revert) | Undo safely on shared branches | `skill/08-revert` | `test-08.txt` | Beginner | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
-| 09 | [Cherry-pick](#09--cherry-pick) | Copy one commit to another branch | `skill/09-cherry-pick` | `test-09.txt` | Intermediate | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
-| 10 | [Reflog](#10--reflog) | Recover "lost" commits and branches | `skill/10-reflog` | `test-10.txt` | Advanced | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
-| 11 | [Bisect](#11--bisect) | Find the commit that introduced a bug | `skill/11-bisect` | `test-11.txt` | Advanced | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
+Skill **NN** always uses branch `skill/NN-…` and file `test-NN.txt`.
+
+| # | Skill | You'll learn | Practice branch | Level | Risk |
+|:-:|---|---|---|---|:-:|
+| 01 | [Branch & switch](#01--branch--switch) | Create, switch and delete branches | `skill/01-branching` | Beginner | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
+| 02 | [Merge](#02--merge) | Fast-forward vs. merge commit | `skill/02-merge` | Beginner | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
+| 03 | [Merge conflicts](#03--merge-conflicts) | Read and resolve conflict markers | `skill/03-conflict` | Intermediate | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
+| 04 | [Rebase](#04--rebase) | Replay your work on the latest main | `skill/04-rebase` | Intermediate | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
+| 05 | [Interactive rebase](#05--interactive-rebase) | Squash, fixup, reword, drop | `skill/05-squash` | Advanced | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
+| 06 | [Stash](#06--stash-apply-vs-pop) | `apply` vs. `pop` | `skill/06-stash` | Beginner | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
+| 07 | [Reset](#07--reset-soft-mixed-hard) | `--soft`, `--mixed`, `--hard` | `skill/07-reset` | Intermediate | ![DANGER](https://img.shields.io/badge/DANGER-f85149?style=flat-square) |
+| 08 | [Revert](#08--revert) | Undo safely on shared branches | `skill/08-revert` | Beginner | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
+| 09 | [Cherry-pick](#09--cherry-pick) | Copy one commit to another branch | `skill/09-cherry-pick` | Intermediate | ![CAREFUL](https://img.shields.io/badge/CAREFUL-d29922?style=flat-square) |
+| 10 | [Reflog](#10--reflog) | Recover "lost" commits and branches | `skill/10-reflog` | Advanced | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
+| 11 | [Bisect](#11--bisect) | Find the commit that introduced a bug | `skill/11-bisect` | Advanced | ![SAFE](https://img.shields.io/badge/SAFE-3fb950?style=flat-square) |
 
 **Risk labels**
 
@@ -150,19 +155,19 @@ A branch is just a **movable label** that points at a commit, and `HEAD` marks t
 **Try it**
 
 ```bash
-git switch skill/01-branching        # visit the practice branch
-cat test-01.txt                      # note the "Hello from skill/01-branching!" line
+git switch skill/01-branching    # visit the practice branch
+cat test-01.txt                  # note the extra "Hello" line
 git switch main
-cat test-01.txt                      # the line is gone: your files follow the branch
+cat test-01.txt                  # line gone: your files follow the branch
 
-git switch -c my-first-branch        # create a branch and switch to it
+git switch -c my-first-branch    # create a branch and switch to it
 echo "- my first branch commit" >> test-01.txt
 git commit -am "test-01: my first branch commit"
-git lg                               # my-first-branch is one commit ahead of main
+git lg                           # my-first-branch is 1 commit ahead
 
-git switch -                         # jump back to the previous branch (main)
-git branch -d my-first-branch        # refused: the work is not merged anywhere
-git branch -D my-first-branch        # force-delete (it's only practice)
+git switch -                     # back to the previous branch (main)
+git branch -d my-first-branch    # refused: the work isn't merged
+git branch -D my-first-branch    # force-delete (it's only practice)
 ```
 
 <details>
@@ -196,13 +201,13 @@ git switch -c my-ff
 echo "- fast-forward me" >> test-02.txt
 git commit -am "test-02: add a note"
 git switch main
-git merge my-ff                      # "Fast-forward": no merge commit
+git merge my-ff               # "Fast-forward": no merge commit
 
 # Part B: merge commit
-git switch skill/02-merge            # visit once so the local branch exists
+git switch skill/02-merge     # visit once so the local branch exists
 git switch main
-git merge skill/02-merge             # your editor opens with a message: save and close
-git lg                               # two lines of history joined by a merge commit
+git merge skill/02-merge      # your editor opens: save and close it
+git lg                        # two histories joined by a merge commit
 ```
 
 <details>
@@ -231,10 +236,10 @@ A conflict happens when two branches change **the same lines** of the same file.
 **Try it**
 
 ```bash
-git switch skill/03-conflict         # here: Status is REJECTED
-git switch main                      # here: Status is APPROVED
-git merge skill/03-conflict          # CONFLICT (content): Merge conflict in test-03.txt
-git status                           # "both modified: test-03.txt"
+git switch skill/03-conflict   # here: Status is REJECTED
+git switch main                # here: Status is APPROVED
+git merge skill/03-conflict    # CONFLICT (content) in test-03.txt
+git status                     # "both modified: test-03.txt"
 ```
 
 Open `test-03.txt`. You'll see:
@@ -250,8 +255,8 @@ Status:    REJECTED
 Replace the **whole block, markers included**, with the line you want, for example `Status:    APPROVED (after review)`. Then:
 
 ```bash
-git add test-03.txt                  # mark the conflict as resolved
-git commit                           # finish the merge (same as: git merge --continue)
+git add test-03.txt            # mark the conflict as resolved
+git commit                     # finish (same as: git merge --continue)
 ```
 
 <details>
@@ -285,14 +290,14 @@ git commit                           # finish the merge (same as: git merge --co
 
 ```bash
 git switch skill/04-rebase
-git log --oneline --graph main skill/04-rebase   # see the fork: main moved on
-git rebase main                      # Successfully rebased and updated refs/heads/skill/04-rebase.
-git log --oneline --graph -5         # your 2 commits now sit on top of main
-cat test-04.txt                      # main's "Release 2.0" banner + your steps 4 and 5
-git status                           # "have diverged": expected after a rebase (see warning)
+git log --oneline --graph main skill/04-rebase   # main moved on
+git rebase main                # "Successfully rebased and updated ..."
+git log --oneline --graph -5   # your 2 commits now sit on top of main
+cat test-04.txt                # main's banner + your steps 4 and 5
+git status                     # "have diverged": expected (see below)
 
 git switch main
-git merge skill/04-rebase            # Fast-forward: no merge commit needed
+git merge skill/04-rebase      # Fast-forward: no merge commit needed
 ```
 
 <details>
@@ -328,8 +333,8 @@ git merge skill/04-rebase            # Fast-forward: no merge commit needed
 
 ```bash
 git switch skill/05-squash
-git log --oneline -5                 # 1 real change + "wip" + "fix typo" + "wip again"
-git rebase -i HEAD~4                 # your editor opens the to-do list
+git log --oneline -5     # 1 real change + wip + fix typo + wip again
+git rebase -i HEAD~4     # your editor opens the to-do list
 ```
 
 Change the to-do list (oldest commit first) to this, then save and close the editor:
@@ -344,8 +349,8 @@ fixup 4d3e2f1 wip again
 Your hashes will be different; only change the **words on the left**.
 
 ```bash
-git log --oneline -3                 # one clean commit left
-cat test-05.txt                      # same final content: Title, Subtitle (typo fixed), Button
+git log --oneline -3     # one clean commit left
+cat test-05.txt          # same content: Title, Subtitle, Button
 ```
 
 <details>
@@ -386,20 +391,20 @@ cat test-05.txt                      # same final content: Title, Subtitle (typo
 
 ```bash
 git switch main
-echo "- eggs" >> test-06.txt         # an uncommitted change
-git switch skill/06-stash            # refused: "Your local changes ... would be overwritten"
+echo "- eggs" >> test-06.txt    # an uncommitted change
+git switch skill/06-stash       # refused: local changes are in the way
 
-git stash push -m "add eggs"         # shelve the change
-git stash list                       # stash@{0}: On main: add eggs
-git switch skill/06-stash            # works now
+git stash push -m "add eggs"    # shelve the change
+git stash list                  # stash@{0}: On main: add eggs
+git switch skill/06-stash       # works now
 git switch main
 
-git stash apply                      # the change is back...
-git stash list                       # ...and the stash entry is still there
-git restore test-06.txt              # throw the applied copy away again
+git stash apply                 # the change is back...
+git stash list                  # ...and the entry is still there
+git restore test-06.txt         # throw the applied copy away again
 
-git stash pop                        # the change is back...
-git stash list                       # ...and the stash entry is gone
+git stash pop                   # the change is back...
+git stash list                  # ...and the entry is gone
 ```
 
 <details>
@@ -439,20 +444,20 @@ git stash list                       # ...and the stash entry is gone
 
 ```bash
 git switch skill/07-reset
-git log --oneline -4                       # day 1, day 2, day 3 (undo me)
+git log --oneline -4                     # day 1, 2, 3 (undo me)
 
-git reset --soft HEAD~1                    # undo the commit, keep the change staged
-git status                                 # "Changes to be committed"
-git reset --hard origin/skill/07-reset     # restore the branch
+git reset --soft HEAD~1                  # undo commit, keep change staged
+git status                               # "Changes to be committed"
+git reset --hard origin/skill/07-reset   # restore the branch
 
-git reset HEAD~1                           # same as --mixed: change kept, unstaged
-git status                                 # "Changes not staged for commit"
+git reset HEAD~1                         # --mixed: kept, but unstaged
+git status                               # "Changes not staged ..."
 git reset --hard origin/skill/07-reset
 
-git reset --hard HEAD~1                    # undo the commit AND delete the change
-git status                                 # "nothing to commit, working tree clean"
-cat test-07.txt                            # "Day 3" is gone
-git reset --hard origin/skill/07-reset     # restore again
+git reset --hard HEAD~1                  # undo commit AND delete change
+git status                               # "nothing to commit ..."
+cat test-07.txt                          # "Day 3" is gone
+git reset --hard origin/skill/07-reset   # restore again
 ```
 
 <details>
@@ -484,11 +489,11 @@ git reset --hard origin/skill/07-reset     # restore again
 
 ```bash
 git switch skill/08-revert
-git log --oneline -4                 # the middle commit turned debug on in production (BAD)
-cat test-08.txt                      # debug = true
-git revert HEAD~1                    # your editor opens with "Revert ...": save and close
-cat test-08.txt                      # debug = false again; timeout and retries are kept
-git log --oneline -5                 # a new "Revert ..." commit on top, nothing removed
+git log --oneline -4    # the middle commit is the BAD one
+cat test-08.txt         # debug = true
+git revert HEAD~1       # editor opens with "Revert ...": save, close
+cat test-08.txt         # debug = false; timeout + retries are kept
+git log --oneline -5    # a new "Revert ..." commit, nothing removed
 ```
 
 Use `git revert --no-edit HEAD~1` to skip the editor.
@@ -564,11 +569,11 @@ flowchart TD
 
 ```bash
 git switch skill/09-cherry-pick
-git log --oneline -4                 # experiment A, the fix, experiment B
+git log --oneline -4    # experiment A, the fix, experiment B
 git switch main
-git cherry-pick -x skill/09-cherry-pick~1   # ~1 = one before the tip = the fix
-cat test-09.txt                      # email fixed, and no experiments came along
-git log -1                           # "(cherry picked from commit ...)"
+git cherry-pick -x skill/09-cherry-pick~1   # ~1 = the fix
+cat test-09.txt         # email fixed, no experiments came along
+git log -1              # "(cherry picked from commit ...)"
 ```
 
 You can of course use the hash from `git log` instead: `git cherry-pick -x <hash>`.
@@ -600,21 +605,21 @@ The reflog is Git's flight recorder: a **local** log of every position `HEAD` ha
 
 ```bash
 git switch skill/10-reflog
-git reset --hard HEAD~2              # chapters 2 and 3 are "gone"
+git reset --hard HEAD~2      # chapters 2 and 3 are "gone"
 git log --oneline -3
 
-git reflog -5                        # HEAD@{1} = where you were before the reset
-git reset --hard HEAD@{1}            # travel back
-cat test-10.txt                      # all three chapters are back
+git reflog -5                # HEAD@{1} = where you were before
+git reset --hard HEAD@{1}    # travel back
+cat test-10.txt              # all three chapters are back
 ```
 
 **Bonus: rescue a deleted branch**
 
 ```bash
-git switch main                      # HEAD@{1} is now the tip of skill/10-reflog
-git branch -D skill/10-reflog        # oops
-git reflog -3                        # the commit you were on is still listed
-git switch -c rescued HEAD@{1}       # bring it back as a new branch
+git switch main                  # now HEAD@{1} = old tip of the branch
+git branch -D skill/10-reflog    # oops
+git reflog -3                    # the old tip is still listed
+git switch -c rescued HEAD@{1}   # bring it back as a new branch
 ```
 
 <details>
@@ -647,25 +652,25 @@ The story: somewhere in the last 8 commits, `tax_rate` changed from `0.20` to `2
 
 ```bash
 git switch skill/11-bisect
-grep tax_rate test-11.txt            # tax_rate = 2.0  -> broken
-git log --oneline -9                 # 8 suspects; none says "changed the tax rate"
+grep tax_rate test-11.txt    # tax_rate = 2.0  -> broken
+git log --oneline -9         # 8 suspects, no message mentions tax
 
 git bisect start
-git bisect bad                       # the current commit is broken
-git bisect good HEAD~8               # 8 commits ago it was fine
+git bisect bad               # the current commit is broken
+git bisect good HEAD~8       # 8 commits ago it was fine
 # Git checks out a commit in the middle. Test it:
 grep tax_rate test-11.txt
-git bisect good                      # if it says 0.20
-git bisect bad                       # if it says 2.0
+git bisect good              # if it says 0.20
+git bisect bad               # if it says 2.0
 # ...repeat until Git prints "<hash> is the first bad commit"
 
-git bisect reset                     # IMPORTANT: return to your branch
+git bisect reset             # IMPORTANT: return to your branch
 ```
 
 **Try it: automatically**
 
 ```bash
-git bisect start HEAD HEAD~8         # bad first, then good
+git bisect start HEAD HEAD~8   # bad first, then good
 git bisect run grep -q "tax_rate = 0.20" test-11.txt
 git bisect reset
 ```
