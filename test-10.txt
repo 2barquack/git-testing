@@ -9,3 +9,4 @@
 Story
 Chapter 1: Git never forgets.
 Chapter 2: You ran git reset --hard. Panic!
+Chapter 3: git reflog saved the day.
