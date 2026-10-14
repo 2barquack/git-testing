@@ -12,3 +12,4 @@ tax_rate = 0.20
 shipping = 4.90
 free_from = 50.00
 discount = WELCOME10
+language = en
