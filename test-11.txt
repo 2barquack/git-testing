@@ -17,3 +17,4 @@ support = help@example.com
 rounding = 2
 newsletter = true
 gift_wrap = 2.50
+returns = 30 days
