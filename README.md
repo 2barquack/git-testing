@@ -5,9 +5,12 @@
 <br>
 
 **A safe, hands-on playground for the Git skills every developer needs.**<br>
-Clone it. Break things. Fix them. Every exercise uses plain `.txt` files, so you can focus 100% on Git.
+Fork it. Break things. Fix them. Every exercise uses plain `.txt` files, so you can focus 100% on Git.
 
 <br>
+
+[![Fork it first](https://img.shields.io/badge/Fork%20it%20first-start%20here-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aimagician/git-testing/fork)
+
 
 [![Skills](https://img.shields.io/badge/skills-11-58a6ff?style=flat-square)](#skill-map)
 [![Level](https://img.shields.io/badge/level-beginner%20%E2%86%92%20advanced-bc8cff?style=flat-square)](#skill-map)
@@ -25,6 +28,15 @@ Clone it. Break things. Fix them. Every exercise uses plain `.txt` files, so you
 
 For anyone — and for my team — who wants to learn or test their Git & GitHub skills: **here it is.**
 
+> [!TIP]
+> **Fork it first. It's the best way to test your skills.**
+> A fork is your own copy of this lab on GitHub. In your fork you can push, force-push, rebase, open pull requests and delete branches freely, without asking anyone and without affecting anyone else. This original stays read-only, so it's always a clean starting point for the next person.
+>
+> 1. Click **[Fork](https://github.com/aimagician/git-testing/fork)** and **untick "Copy the main branch only"**. Otherwise your fork gets only `main` and none of the 11 practice branches.
+> 2. Clone **your** fork: `git clone https://github.com/<your-username>/git-testing.git`
+>
+> Using the GitHub CLI? `gh repo fork aimagician/git-testing --clone` does both steps and keeps every branch.
+
 This repository is a **lab**, not a project. Every practice branch has been prepared so that a specific Git situation is waiting for you: a conflict to resolve, a messy history to squash, a "lost" commit to rescue, a bug to hunt down. For every skill you get:
 
 - **An animated diagram** of what Git is doing under the hood
@@ -37,16 +49,23 @@ Nothing here can hurt a real codebase. Break it as often as you like.
 ## Quick start
 
 ```bash
-# 1. Clone the lab (you get every practice branch as origin/skill/...)
-git clone https://github.com/aimagician/git-testing.git
+# 1. Fork first (see the tip above), then clone YOUR fork
+git clone https://github.com/<your-username>/git-testing.git
 cd git-testing
+# Only want to look around? Cloning the original also works
+# (you just can't push to it):
+#   git clone https://github.com/aimagician/git-testing.git
 
-# 2. Look around
+# 2. Look around: every practice branch is there as origin/skill/...
 git branch -a
 
 # 3. Recommended: a readable history view used throughout this guide
 git config --global alias.lg "log --oneline --graph --decorate --all"
 git lg
+
+# 4. Keep a link to the original lab, so you can reset from it later
+#    (skip if you used gh repo fork --clone, which already did this)
+git remote add upstream https://github.com/aimagician/git-testing.git
 ```
 
 > [!TIP]
@@ -110,6 +129,11 @@ git reset --hard origin/main
 # 3. Put one practice branch back
 git switch skill/04-rebase
 git reset --hard origin/skill/04-rebase
+
+# 4. Pushed experiments to your fork? Restore it from the original lab
+git fetch upstream
+git reset --hard upstream/skill/04-rebase
+git push --force-with-lease origin skill/04-rebase   # only in YOUR fork
 ```
 
 > [!CAUTION]
@@ -760,7 +784,7 @@ Commands that can **destroy work** or **hurt your teammates**, and how to protec
 
 ## Team workflow on GitHub
 
-Everything above works locally after a simple clone. To practise the GitHub side (push, pull requests, reviews), work in your own copy:
+Everything above works locally. To practise the GitHub side (push, pull requests, reviews), use your fork:
 
 1. **Fork** this repository. In the fork dialog, **untick "Copy the main branch only"** so you get all `skill/*` branches (or run `gh repo fork aimagician/git-testing --clone`, which copies every branch).
 2. Create a branch: `git switch -c practice/<your-name>`.
@@ -850,7 +874,7 @@ To keep the lab clean and safe:
 - `main` and `skill/*` are **protected** branches (no pushes, force-pushes or deletions except by the maintainer).
 - **Secret scanning push protection** blocks pushes that contain tokens or keys.
 
-You don't need any access to learn: clone it, or **fork it and make it your own**. Spotted a mistake or have an idea for skill #12? Get in touch with [@aimagician](https://github.com/aimagician).
+You don't need any access to learn: **fork it** and make it your own. Spotted a mistake or have an idea for skill #12? Get in touch with [@aimagician](https://github.com/aimagician).
 
 ---
 
