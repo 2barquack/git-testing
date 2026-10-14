@@ -9,4 +9,4 @@
 Login screen copy
 -----------------
 Title:    Welcome back!
-Subtitle: Please sign in to contnue
+Subtitle: Please sign in to continue
