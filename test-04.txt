@@ -6,6 +6,8 @@
 #  Guide: README.md -> Skill 04
 # ==========================================================
 
+>>> Release 2.0 is live on main <<<
+
 How we ship a feature
 1. Plan it
 2. Build it
