@@ -12,3 +12,4 @@ phone = +1 555 0100
 
 Experiments:
 - dark mode toggle (unfinished)
+- confetti on login (unfinished)
