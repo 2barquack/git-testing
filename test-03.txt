@@ -8,5 +8,5 @@
 
 Project:   Apollo
 Owner:     Ana
-Status:    IN REVIEW
+Status:    REJECTED
 Deadline:  Friday
