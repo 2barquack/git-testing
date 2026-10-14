@@ -9,6 +9,6 @@
 Release checklist
 [x] write code
 [x] write tests
-[ ] update docs
+[x] update docs
 
 Notes (add your own lines below):
