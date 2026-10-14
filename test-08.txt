@@ -11,3 +11,4 @@ port      = 8080
 debug     = true
 log_level = info
 timeout   = 30
+retries   = 3
