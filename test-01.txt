@@ -6,7 +6,8 @@
 #  Guide: README.md -> Skill 01
 # ==========================================================
 
-This version lives on:  main
+This version lives on:  skill/01-branching
 Mission:                create a branch, commit, switch back
 
 Notes (add your own lines below):
+- Hello from skill/01-branching! Switch to main and this line disappears.
