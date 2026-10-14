@@ -13,3 +13,4 @@ shipping = 4.90
 free_from = 50.00
 discount = WELCOME10
 language = en
+support = help@example.com
