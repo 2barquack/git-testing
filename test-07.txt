@@ -8,3 +8,4 @@
 
 Diary
 Day 1: learned git reset --soft
+Day 2: learned git reset --mixed
