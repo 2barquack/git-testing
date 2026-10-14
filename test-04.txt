@@ -11,3 +11,4 @@ How we ship a feature
 2. Build it
 3. Test it
 4. Review it
+5. Ship it
