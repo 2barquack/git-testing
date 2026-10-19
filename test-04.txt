@@ -12,3 +12,4 @@ How we ship a feature
 1. Plan it
 2. Build it
 3. Test it
+4. Delete it and start over
