@@ -8,3 +8,4 @@
 
 Login screen copy
 -----------------
+I want to have a fan
